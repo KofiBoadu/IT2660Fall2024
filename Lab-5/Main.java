@@ -3,7 +3,7 @@ public class Main {
       // Step 1 - Create a BST tree object called lab5Tree
       BST<Integer> lab5Tree = new BST<>();
 
-      // Step 2 - Insert the following values
+      // Step 2 - Insert the following values: 13, 22, 36, 5, 48, 17, 39, 2, 26, 40, 29, 34, 10
       lab5Tree.insert(13);
       lab5Tree.insert(22);
       lab5Tree.insert(36);
