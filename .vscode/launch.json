@@ -1,0 +1,14 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "java",
+        "name": "Launch Lab6",
+        "request": "launch",
+        "mainClass": "Main",
+        "cwd": "${IT2660Fall2024}/lab6",
+        "projectName": "lab6"
+      }
+    ]
+  }
+  
