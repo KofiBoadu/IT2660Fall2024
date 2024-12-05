@@ -29,9 +29,12 @@ class Main {
     UnweightedGraph<String>.SearchTree dfs = graph.dfs(graph.getIndex("Business & Technology")); // Get a dfs starting at the Business and Technology Building. Change this is you called it something different in your vertices!
     
     System.out.println("Paths from Business & Technology:");
-    printPath(graph, dfs, "Health Technologies Center");
-    printPath(graph, dfs, "Student Services");
-    printPath(graph, dfs, "Recreation Center");
+    dfs.printPath(graph.getIndex("Health Technologies Center")); 
+    dfs.printPath(graph.getIndex("Student Services"));         
+    dfs.printPath(graph.getIndex("Recreation Center"));
+
+    System.out.println("\nDFS Tree:");
+    dfs.printTree();
 
     java.util.List<Integer> searchOrders = dfs.getSearchOrder();
     System.out.println(dfs.getNumberOfVerticesFound() + " vertices are searched in this DFS order:");
@@ -46,23 +49,6 @@ class Main {
   }
 
 
-//print path to a specific vertice
-public static void printPath(Graph<String> graph, UnweightedGraph<String>.SearchTree dfs, String target) {
-  int targetIndex = graph.getIndex(target);
-  if (targetIndex == -1) {
-      System.out.println("Vertex " + target + " not found in the graph.");
-      return;
-  }
-  List<String> path = dfs.getPath(targetIndex);
-  if (path == null) {
-      System.out.println("No path from Business & Technology to " + target + ".");
-      return;
-  }
-  System.out.print("Path to " + target + ": ");
-  for (int i = path.size() - 1; i >= 0; i--) {
-      System.out.print(path.get(i) + (i > 0 ? " -> " : ""));
-  }
-  System.out.println();
-}
+  
 
 }
